@@ -33,7 +33,8 @@ class CreatePostContainer extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ),
+          const Divider(height: 10.0, thickness: 0.5),
         ],
       ),
     );
