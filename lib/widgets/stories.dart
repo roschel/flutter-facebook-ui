@@ -98,7 +98,10 @@ class _StoryCard extends StatelessWidget {
                     onPressed: () => print("Add to Story"),
                   ),
                 )
-              : ProfileAvatar(imageUrl: story.user.imageUrl),
+              : ProfileAvatar(
+                  imageUrl: story.user.imageUrl,
+                  hasBorder: !story.isViewed,
+                ),
         )
       ],
     );
