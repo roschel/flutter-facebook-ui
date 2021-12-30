@@ -14,7 +14,7 @@ class CreatePostContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.fromLTRB(12.0, 8.0, 12.0, 0.0),
-      color: Colors.orange,
+      color: Colors.white,
       child: Column(
         children: [
           Row(
@@ -35,6 +35,15 @@ class CreatePostContainer extends StatelessWidget {
             ],
           ),
           const Divider(height: 10.0, thickness: 0.5),
+          Row(
+            children: [
+              TextButton.icon(
+                onPressed: () => print("live"),
+                icon: const Icon(Icons.videocam, color: Colors.red),
+                label: Text("Live"),
+              )
+            ],
+          )
         ],
       ),
     );
