@@ -35,6 +35,19 @@ class HomeScreen extends StatelessWidget {
                   iconSize: 30.0,
                   color: Colors.black,
                 ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  onPressed: () => print("oi"),
+                  icon: Icon(Icons.search),
+                  iconSize: 30.0,
+                  color: Colors.black,
+                ),
               )
             ],
           )
