@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/palette.dart';
+import 'package:flutter_facebook_responsive_ui/widgets/circle_button.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -23,31 +25,15 @@ class HomeScreen extends StatelessWidget {
             floating: true,
             centerTitle: false,
             actions: [
-              Container(
-                margin: const EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  onPressed: () => print("oi"),
-                  icon: Icon(Icons.search),
-                  iconSize: 30.0,
-                  color: Colors.black,
-                ),
+              CircleButton(
+                icon: Icons.search,
+                iconSize: 30.0,
+                onPressed: () => print("search"),
               ),
-              Container(
-                margin: const EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  onPressed: () => print("oi"),
-                  icon: Icon(Icons.search),
-                  iconSize: 30.0,
-                  color: Colors.black,
-                ),
+              CircleButton(
+                icon: MdiIcons.facebookMessenger,
+                iconSize: 30.0,
+                onPressed: () => print("Messenger"),
               )
             ],
           )
