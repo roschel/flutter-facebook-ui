@@ -35,28 +35,40 @@ class CreatePostContainer extends StatelessWidget {
             ],
           ),
           const Divider(height: 10.0, thickness: 0.5),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              TextButton.icon(
-                onPressed: () => print("live"),
-                icon: const Icon(Icons.videocam, color: Colors.red),
-                label: Text("Live"),
-              ),
-              const VerticalDivider(width: 8.0),
-              TextButton.icon(
-                onPressed: () => print("live"),
-                icon: const Icon(Icons.videocam, color: Colors.red),
-                label: Text("Live"),
-              ),
-              const VerticalDivider(width: 8.0),
-              TextButton.icon(
-                onPressed: () => print("live"),
-                icon: const Icon(Icons.videocam, color: Colors.red),
-                label: Text("Live"),
-              ),
-              const VerticalDivider(width: 8.0)
-            ],
+          Container(
+            height: 40.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton.icon(
+                  onPressed: () => print("live"),
+                  icon: const Icon(
+                    Icons.videocam,
+                    color: Colors.red,
+                  ),
+                  label: Text("Live"),
+                ),
+                const VerticalDivider(width: 8.0),
+                TextButton.icon(
+                  onPressed: () => print("Photo"),
+                  icon: const Icon(
+                    Icons.photo_library,
+                    color: Colors.green,
+                  ),
+                  label: Text("Photo"),
+                ),
+                const VerticalDivider(width: 8.0),
+                TextButton.icon(
+                  onPressed: () => print("Room"),
+                  icon: const Icon(
+                    Icons.video_call,
+                    color: Colors.purpleAccent,
+                  ),
+                  label: Text("Room"),
+                ),
+                const VerticalDivider(width: 8.0)
+              ],
+            ),
           )
         ],
       ),
