@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_responsive_ui/config/palette.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
+import 'package:flutter_facebook_responsive_ui/widgets/profile_avatar.dart';
 
 class Stories extends StatelessWidget {
   final User currentUser;
@@ -69,6 +71,34 @@ class _StoryCard extends StatelessWidget {
             width: 110.0,
             fit: BoxFit.cover,
           ),
+        ),
+        Container(
+          height: double.infinity,
+          width: 110.0,
+          decoration: BoxDecoration(
+              gradient: Palette.storyGradient,
+              borderRadius: BorderRadius.circular(12.0)),
+        ),
+        Positioned(
+          top: 8.0,
+          left: 8.0,
+          child: isAddStory
+              ? Container(
+                  height: 40.0,
+                  width: 40.0,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    padding: EdgeInsets.zero,
+                    icon: const Icon(Icons.add),
+                    iconSize: 30.0,
+                    color: Palette.facebookBlue,
+                    onPressed: () => print("Add to Story"),
+                  ),
+                )
+              : ProfileAvatar(imageUrl: story.user.imageUrl),
         )
       ],
     );
